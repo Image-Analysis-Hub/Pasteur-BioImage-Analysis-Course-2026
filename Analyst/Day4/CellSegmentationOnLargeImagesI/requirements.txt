@@ -1,8 +1,0 @@
-cellpose[distributed]
-matplotlib
-jupyterlab
-memory_profiler
-codecarbon
-dask
-scikit-learn
-napari[pyqt5]

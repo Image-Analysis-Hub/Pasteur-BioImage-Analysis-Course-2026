@@ -57,6 +57,7 @@ Monday June the 1st - Friday June the 5th 2026, Institut Pasteur, Paris, France
 - [Robert HAASE](https://www.uni-leipzig.de/personenprofil/mitarbeiter/dr-robert-haase) - ScaDS.AI Leipzig
 - [Gaëlle LETORT](https://research.pasteur.fr/en/member/gaelle-letort/) - Developmental and Stem Cell Biology, Institut Pasteur
 - [Vannary MEAS-YEDID](https://research.pasteur.fr/en/member/vannary-meas-yedid/) - Biological Image Analysis research unit, Institut Pasteur
+- [Thomas MUSSET](https://research.pasteur.fr/fr/member/thomas-musset/) - Biological Image Analysis research unit, Institut Pasteur
 - [Jean-Christophe OLIVO-MARIN](https://research.pasteur.fr/en/member/jean-christophe-olivo-marin/) - Biological Image Analysis research unit, Institut Pasteur
 - [Thierry PÉCOT](https://biosit.univ-rennes.fr/ressources/faiia-centre-dintelligence-artificielle-et-danalyse-dimages-plateforme-de-biosit) - FAIIA, BIOSIT, Université de Rennes
 - [Minh-Son PHAN](https://research.pasteur.fr/en/member/minh-son-phan/) - Image Analysis Hub, C2RI, Institut Pasteur

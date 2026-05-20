@@ -51,7 +51,7 @@ Monday June the 1st - Friday June the 5th 2026, Institut Pasteur, Paris, France
 ## Speakers, Teachers, and Helpers
 
 
-- Mélodie AMBROSET -
+- [Mélodie AMBROSET](https://eng-ur-bia.angers-nantes.hub.inrae.fr/) - UR BIA, INRAE, Nantes, France 
 - [Lenka BACKOVÀ](https://scholar.google.com/citations?user=iDPf1qgAAAAJ&hl=en)](https://research.pasteur.fr/en/member/minh-son-phan/) - Image Analysis Hub, C2RI, Institut Pasteur
 - [Carlos GARCIA-LÒPEZ-DE-HARO](https://github.com/carlosuc3m) - Universidad Carlos III de Madrid
 - [Robert HAASE](https://www.uni-leipzig.de/personenprofil/mitarbeiter/dr-robert-haase) - ScaDS.AI Leipzig

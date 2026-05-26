@@ -73,7 +73,7 @@ By the end of this segment, you’ll be equipped with the knowledge and tools to
 
 
 > **Link to Quality control notebook**
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2026/tree/main/ECI/Day_4_materials/Quality_control_notebook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2026/blob/main/ECI/Day_4_materials/Quality_control_notebook.ipynb)
 
 
 **Acknowledgement**

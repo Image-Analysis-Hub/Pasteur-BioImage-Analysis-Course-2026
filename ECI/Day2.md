@@ -13,8 +13,17 @@ This page collects instructions, links and materials for the Day 2
 
 **Remark**: Please bring your mouse since we will draw a lot! Using the trackpad of your laptop will make you cry!
 
+# Topic 2: Cellpose for machine learning in image analysis
 
-# Topic 2: Icy for Bioimage Analysis
+**Instructor**: Julie Mabon, Unité d'Analyse d'Images Biologiques, Institut Pasteur
+
+**Preparation**
+- See [Day2_Cellpose/Installation](./Day2_Cellpose/Installation.md)
+
+**Course**: [Day2_Cellpose/Day2_Cellpose](./Day2_Cellpose/Day2_Cellpose.md)
+
+
+# Topic 3: Icy for Bioimage Analysis
 
 We will be using the alpha of the new version of Icy 3, that we have been brewing in the past 2 years. 
 This new version will be release after the course and will ship new means to interact with the Python scientific ecosystem. 

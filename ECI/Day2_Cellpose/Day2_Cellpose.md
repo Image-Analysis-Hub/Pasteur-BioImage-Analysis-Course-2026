@@ -9,7 +9,7 @@
 ### For part 1 & 2
 > [!WARNING] Requirements
 > - Check you have the latest **Fiji/ImageJ** version with Java > 21
-![alt text](assets/image_fiji.png)
+![Fiji version check](assets/image_fiji.png)
 >  - if not get it there: https://imagej.net/software/fiji/downloads
 
 > [!IMPORTANT] Cellpose - Appose Fiji plugin installation
@@ -56,7 +56,7 @@ First use case: use Cellpose 3[^cp3] to segment nuclei and count spot area (inte
 > - Set Cytoplasmic/Nuclei channel according to your image: here we don't have a cytoplasmic channel (→ None), and the nuclei staining is in channel 4
 > - Make sure to check `return ROIs` to get ROIs in Fiji for our measurements
 
-![alt text](assets/image-cp_appose.png)
+![Cellpose-Appose plugin parameters](assets/image-cp_appose.png)
 
 
 4. Click OK (it may take a while the first time to set up the Python environment)
@@ -66,20 +66,20 @@ First use case: use Cellpose 3[^cp3] to segment nuclei and count spot area (inte
 
 5. Check the results. Check `Show All` in the `ROI Manager` to see all ROIs, `Labels` to show instance labels
 
-![alt text](assets/image-ROI_manager.png)
+![ROI Manager with labels displayed](assets/image-ROI_manager.png)
 
 6. Now we are going to set up the measurements to extract for each nucleus ROI. Customize measurements in `Analyse > Set Measurements` (see documentation at https://imagej.net/ij/docs/menus/analyze.html#set) 
 
-![alt text](assets/image-set_measurments.png)
+![Set Measurements dialog](assets/image-set_measurments.png)
 
 7. Select the spots channel (ch 3/4) since this is what we want to measure.
 8. In `ROI Manager`, select all with `Ctrl+A` (`Cmd+A` on Mac). Then go to `ROI Manager > More > Multi Measure` and set as follows: 
 
-![alt text](assets/image-multi_measure.png)
+![Multi Measure settings](assets/image-multi_measure.png)
 
 9. You should get something like this: one row per nucleus ROI, with measurements from channel 3. Save with `Results > File > Save As...`
 
-![alt text](assets/image_results.png)
+![Results table with measurements](assets/image_results.png)
 
 
 ## 🎛️ Part 2: When it does not work out of the box
@@ -102,10 +102,10 @@ Let's open [IBIDI.tif](./images/IBIDI.tif) and try to extract the nuclei
 </details>
 
 > [!TIP]
-> You can use the line tool to measure your cell diameter in the image: 
-> ![alt text](assets/image-length.png)
+> You can use the line tool to measure your cell diameter in the image:
+> ![Line tool measurement](assets/image-length.png)
 > Length is in µm, use `Ctrl+I` to display image info and get the pixel/µm
-> ![alt text](assets/image-image_info.png)
+> ![Image info dialog](assets/image-image_info.png)
 > Then you can get: cell diameter (px) = resolution (px/µm) × length (µm)
 
 
@@ -117,15 +117,12 @@ Our [IBIDI.tif](./images/IBIDI.tif) also has information about the cytoplasm (DA
 
 
 1. In the `cellposegui` environment (make sure you ran `mamba activate cellposegui`), run `cellpose`. You should get something like this:
-![alt text](assets/image-cellpose_gui.png)
+![Cellpose-GUI interface](assets/image-cellpose_gui.png)
 
 
 # 📝 Take-home message
 
-- For any biological image instance segmentation task, I suggest proceeding as follows until you get sufficiently good results: 
-
-
-
+- For any biological image instance segmentation task, I suggest proceeding as follows until you get sufficiently good results:
 ```mermaid
 flowchart TD
     I([biological image instance segmentation task]) --> O[🛠️ Try classic methods eg: thresholding, connected components labeling]

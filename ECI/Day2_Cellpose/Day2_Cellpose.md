@@ -87,24 +87,58 @@ Our [IBIDI.tif](./images/IBIDI.tif) also has information about the cytoplasm (DA
 ### More if you have time
 You can try 3D segmentation on [BMP4blastocystC3-cropped_resampled_8bit.tif](images/BMP4blastocystC3-cropped_resampled_8bit.tif).
 
+> [!INFO]
+> `Mode 3D`: `2D+stitch` performs 2D segmentation on each slice and stitches labels from each slices if there intersection over union (IOU) is above `stitch_threshold` (this is faster but sometimes imprecise); `3D` performs 2D inference on all XY, XZ, YZ slices and merges the estimated flows and cell probabilities (this is much slower but can sometimes improve results).
+
 ## 🏋️ Part 3: Fine-tuning using Cellpose-GUI
 
 **Use case:** Let's work on images where Cellpose does not work out of the box and we need to fine-tune it on our images
 
+Here we will try to improve the default detection from cyto3 to only extract the epithelial cells.
 
-1. In the `cellposegui` environment (make sure you ran `mamba activate cellposegui`), run `cellpose`. You should get something like this:
+_from [^epi]_ ![](./assets/Anatomy_of_normal_large_intestinal_crypts.jpg)
+
+By default, Cellpose cyto3 over-segments but is not too far from our goal:
+<details><summary>Results with cyto3</summary>
+<img src="assets/image-hysto_cyto3.png" alt="Over-segmentation with cyto3" />
+</details><br>
+
+
+We want to fine-tune the model to get better results: 
+<details><summary>Results with custom model</summary>
+<img src="assets/image-hysto_custom.png" alt="Better detection with custom model" />
+</details><br>
+
+
+Data is located in [ECI/Day2_Cellpose/images/cp3_finetune](./images/cp3_finetune)
+
+
+1. Prepare a crop of the first image (because correcting annotations on the whole image would be too long): open image on Fiji, draw a rectangle where to crop, then `Image > Crop`, `File > Save As > .Tif...` save in the same folder as the source image (e.g., as `<filename>_crop.tif`).
+
+2. Open Cellpose GUI: In the `cellposegui` environment (make sure you ran `mamba activate cellposegui`), run `cellpose`. You should get something like this:
 ![Cellpose-GUI interface](assets/image-cellpose_gui.png)
 
+3. Load the crop by drag and drop or `File > Load Image`. Tune the diameter, set channel to use, then `run cyto3`.
 
-**🏗️ WIP**
+4. Correct the segmentation:
+    - `Ctrl+ left click` to delete
+    - `Right click` to draw a new cell
 
-- download the data
-- segment image 1
-- correct segmentation
-- train a bit
-- check segmentation
+5. Train a model on this patch: 
+    - Models > Train new model with Images + masks in folder
+    - Set up training
+    - Run (it may take a while; monitor the progress in the terminal where you started cellpose from)
+![Training model settings](assets/image-cellposegui_train.png)
+    
+6. When training is done, the GUI goes on the next image in the folder and tries to segment it with your trained model. You can repeat steps 4-5 as needed to improve the results
 
-# 📝 Take-home message
+7. Your model is stored in the image folder e.g., `my_images_folder/models/CP_20260526_144944`. You can reuse it within the Cellpose-Appose Fiji plugin with the `Path to custom model` field:
+![Custom model path in Cellpose-Appose](assets/image-cellposeappose_custommodel.png)
+
+> [!INFO]
+> You may need to convert the RGB image to a multichannel image before you run Cellpose: `Image > Colors > Channels Tool...` (alternatively `Ctrl+Shift+Z`) then change `Composite` to `Color` → OK
+
+## 📝 Take-home message
 
 - For any biological image instance segmentation task, I suggest proceeding as follows until you get sufficiently good results:
 ```mermaid
@@ -119,11 +153,12 @@ flowchart TD
     C -->|good results 👍| S
     C -->|bad results 😣| D[🏋️ Retrain Cellpose 3 on small annotated images/patches]
     D -->|good results 👍| S
-    D -->|bad results 😰| F([🧰 Try another tool 
+    D -->|bad results 😰| F([😭 cry
+    🧰 Try another tool 
      🙋 Ask for help])
 ```
 
-# 💽 Data
+## 💽 Data
 - [AB3-HG-AQUCISITION-4CHANNELS-SHRNActrl-filtered_crop.tif](./images/AB3-HG-AQUCISITION-4CHANNELS-SHRNActrl-filtered_crop.tif): crop + maxproj from https://zenodo.org/records/17048217
   > _3D confocal images of dorsal views of dissected telencephala from 4 months post-fertilization (mpf) zebrafish. Dataset of images to complement the paper: FishFeats: streamlined quantification of multimodal labeling at the single-cell level in 3D tissues. Bit depth for all images acquired was 16 bit, a tile scan of multiple Z stacks all with a voxel size of 0.207 µm × 0.207 µm × 0.5 µm. Immunohistochemistry (IHC) for Zo1 (Zonula occludens 1) outlines the apical cell contours, and IHC of Sox2 is used for the identification of neural stem cells and progenitor cells corresponding mostly to the first layer of cells. Expression of pcna, her4 and hey1 (in green, orange and red) were detected using fluorescent in situ hybridization (FISH)._
 - [IBIDI.tif](./images/IBIDI.tif): From D. BROKATZKY, Pasteur - [Dynamics of Host-Pathogen Interactions](https://research.pasteur.fr/fr/team/dynamics-of-host-pathogen-interactions/)
@@ -133,4 +168,5 @@ flowchart TD
 
 [^cp3]: Stringer, C. & Pachitariu, M. (2025). Cellpose3: one-click image restoration for improved segmentation. Nature Methods. https://www.nature.com/articles/s41592-025-02595-5
 [^cpsam]: Pachitariu, M., Rariden, M., & Stringer, C. (2025). Cellpose-SAM: superhuman generalization for cellular segmentation. bioRxiv. https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1
+[^epi]: Rathore, S.; Iftikhar, M.A.; Chaddad, A.; Niazi, T.; Karasic, T.; Bilello, M. Segmentation and Grade Prediction of Colon Cancer Digital Pathology Images Across Multiple Institutions. Cancers 2019, 11, 1700. doi.org/10.3390/cancers11111700. Attribution 4.0 International (CC BY 4.0), https://commons.wikimedia.org/w/index.php?curid=83572639
 

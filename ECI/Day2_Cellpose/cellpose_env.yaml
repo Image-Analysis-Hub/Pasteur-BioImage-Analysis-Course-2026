@@ -1,4 +1,4 @@
-name: cellposegui2
+name: cellposegui
 channels:
   - conda-forge
 dependencies:

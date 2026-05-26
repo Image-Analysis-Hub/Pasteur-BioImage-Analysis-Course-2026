@@ -94,13 +94,13 @@ You can try 3D segmentation on [BMP4blastocystC3-cropped_resampled_8bit.tif](ima
 
 **Use case:** Let's work on images where Cellpose does not work out of the box and we need to fine-tune it on our images
 
-Here we will try to improve the default detection from cyto 3 to only extract the epithelial cells
+Here we will try to improve the default detection from cyto3 to only extract the epithelial cells.
 
 _from [^epi]_ ![](./assets/Anatomy_of_normal_large_intestinal_crypts.jpg)
 
-By default, Cellpose cyto3 is oversegments but is not too far from our goal: 
+By default, Cellpose cyto3 over-segments but is not too far from our goal:
 <details><summary>Results with cyto3</summary>
-<img src="assets/image-hysto_cyto3.png" alt="Overdetection with cyto3" />
+<img src="assets/image-hysto_cyto3.png" alt="Over-segmentation with cyto3" />
 </details><br>
 
 
@@ -113,30 +113,30 @@ We want to fine-tune the model to get better results:
 Data is located in [ECI/Day2_Cellpose/images/cp3_finetune](./images/cp3_finetune)
 
 
-1. Prepare a crop of the first image (because correcting annotations on the whole iamge would be too long): open image on FIJI, Draw a rectangle where to crrop, then `Image > Crop`, `File > Save As > .Tif...` save in the same folder as the source image (eg as `<filename>_crop.tif`).
+1. Prepare a crop of the first image (because correcting annotations on the whole image would be too long): open image on Fiji, draw a rectangle where to crop, then `Image > Crop`, `File > Save As > .Tif...` save in the same folder as the source image (e.g., as `<filename>_crop.tif`).
 
 2. Open Cellpose GUI: In the `cellposegui` environment (make sure you ran `mamba activate cellposegui`), run `cellpose`. You should get something like this:
 ![Cellpose-GUI interface](assets/image-cellpose_gui.png)
 
 3. Load the crop by drag and drop or `File > Load Image`. Tune the diameter, set channel to use, then `run cyto3`.
 
-4. Correct the segmentation: 
-    - `CTRL+ left click` to delete
+4. Correct the segmentation:
+    - `Ctrl+ left click` to delete
     - `Right click` to draw a new cell
 
-5. train a model on this patch: 
+5. Train a model on this patch: 
     - Models > Train new model with Images + masks in folder
     - Set up training
     - Run (it may take a while; monitor the progress in the terminal where you started cellpose from)
-![alt text](assets/image-cellposegui_train.png)
+![Training model settings](assets/image-cellposegui_train.png)
     
 6. When training is done, the GUI goes on the next image in the folder and tries to segment it with your trained model. You can repeat steps 4-5 as needed to improve the results
 
-7. Your model is stored in the image folder eg `my_imges_folder/models/CP_20260526_144944`. You can reuse it within the Cellpose-Appose FIJI plugin with the `Path to custom model` field:
-![alt text](assets/image-cellposeappose_custommodel.png)
+7. Your model is stored in the image folder e.g., `my_images_folder/models/CP_20260526_144944`. You can reuse it within the Cellpose-Appose Fiji plugin with the `Path to custom model` field:
+![Custom model path in Cellpose-Appose](assets/image-cellposeappose_custommodel.png)
 
->[!INFO]
-> You may need to convert the RGB image to a multichannel image before you run Cellpose: `Image > Colors > Channels Tool...` (alternatively `CTRL+MAJ+Z`) then change `Composite` to `Color` -> `Ok`
+> [!INFO]
+> You may need to convert the RGB image to a multichannel image before you run Cellpose: `Image > Colors > Channels Tool...` (alternatively `Ctrl+Shift+Z`) then change `Composite` to `Color` → OK
 
 ## 📝 Take-home message
 
@@ -168,5 +168,5 @@ flowchart TD
 
 [^cp3]: Stringer, C. & Pachitariu, M. (2025). Cellpose3: one-click image restoration for improved segmentation. Nature Methods. https://www.nature.com/articles/s41592-025-02595-5
 [^cpsam]: Pachitariu, M., Rariden, M., & Stringer, C. (2025). Cellpose-SAM: superhuman generalization for cellular segmentation. bioRxiv. https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1
-[^epi]: Rathore, S.; Iftikhar, M.A.; Chaddad, A.; Niazi, T.; Karasic, T.; Bilello, M - Rathore, S.; Iftikhar, M.A.; Chaddad, A.; Niazi, T.; Karasic, T.; Bilello, M. Segmentation and Grade Prediction of Colon Cancer Digital Pathology Images Across Multiple Institutions. Cancers 2019, 11, 1700. doi.org/10.3390/cancers11111700Attribution 4.0 International (CC BY 4.0), CC BY 4.0, https://commons.wikimedia.org/w/index.php?curid=83572639
+[^epi]: Rathore, S.; Iftikhar, M.A.; Chaddad, A.; Niazi, T.; Karasic, T.; Bilello, M. Segmentation and Grade Prediction of Colon Cancer Digital Pathology Images Across Multiple Institutions. Cancers 2019, 11, 1700. doi.org/10.3390/cancers11111700. Attribution 4.0 International (CC BY 4.0), https://commons.wikimedia.org/w/index.php?curid=83572639
 

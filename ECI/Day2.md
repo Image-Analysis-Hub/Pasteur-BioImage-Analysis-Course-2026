@@ -15,6 +15,8 @@ This page collects instructions, links and materials for the Day 2
 
 # Topic 2: Cellpose for machine learning in image analysis
 
+[Cellpose](https://github.com/MouseLand/cellpose) is a model for cell and nucleus segmentation with great generalization power.
+
 **Instructor**: Julie Mabon, Unité d'Analyse d'Images Biologiques, Institut Pasteur
 
 **Preparation**

@@ -138,6 +138,9 @@ Data is located in [ECI/Day2_Cellpose/images/cp3_finetune](./images/cp3_finetune
 > [!INFO]
 > You may need to convert the RGB image to a multichannel image before you run Cellpose: `Image > Colors > Channels Tool...` (alternatively `Ctrl+Shift+Z`) then change `Composite` to `Color` → OK
 
+> [!TIP]
+> The user input on the Cellpose GUI is not the most practical for extensive manual annotations. If you prefer using QuPath to annotate, [here](./export_labels_to_cp.groovy) is a small groovy script to export a ROI with all annotations inside as patch + masks in a cellpsoe compatible format.
+
 ## 📝 Take-home message
 
 - For any biological image instance segmentation task, I suggest proceeding as follows until you get sufficiently good results:

@@ -7,7 +7,7 @@
 ## 🧑‍💻 Getting ready
 
 > [!WARNING]
-> Be sure to have all tools installed as instructed in [[Installation]]
+> Be sure to have all tools installed as instructed in [Installation](./Installation.md)
 
 
 ## 🪄 Part 1: Cellpose-Appose on Fiji

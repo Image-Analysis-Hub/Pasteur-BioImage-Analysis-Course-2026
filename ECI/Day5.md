@@ -18,8 +18,6 @@ Contents:
 - Short lecture to present CellTracksColab
 - Practicals with the CellTracksColab platform
 
-**[Slides](https://drive.google.com/file/d/14fQZ8EWE5TQycxVgEKTviNztYFPvCtpk/view?usp=sharing)**
-
 Link to the platform -> **[CellTracksColab](https://github.com/CellMigrationLab/CellTracksColab)**
 
 ## Preparing for the practicals

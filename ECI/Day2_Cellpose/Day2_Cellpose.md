@@ -112,6 +112,11 @@ Let's open [IBIDI.tif](./images/IBIDI.tif) and try to extract the nuclei
 ### Tuning contrast
 Our [IBIDI.tif](./images/IBIDI.tif) also has information about the cytoplasm (DAPI + cellmask in the same channel), but the nuclei are very bright and the cytoplasm is very faint. Let's play around with the image contrast to get the cytoplasm!
 
+**🏗️ WIP**
+
+- Retinex 
+- Segment again
+
 
 ## 🏋️ Part 3: Fine-tuning using Cellpose-GUI
 
@@ -119,6 +124,14 @@ Our [IBIDI.tif](./images/IBIDI.tif) also has information about the cytoplasm (DA
 1. In the `cellposegui` environment (make sure you ran `mamba activate cellposegui`), run `cellpose`. You should get something like this:
 ![Cellpose-GUI interface](assets/image-cellpose_gui.png)
 
+
+**🏗️ WIP**
+
+- download some data
+- try segmentation
+- correct segmentation
+- train a bit
+- check segmentation
 
 # 📝 Take-home message
 

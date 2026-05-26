@@ -91,7 +91,7 @@ If it is not done already, download and install a fresh Fiji: https://fiji.sc/
 For the practicals of today, we will learn how to use TrackMate with demo images. 
 Please download them from here in advance:
 
-https://dl.pasteur.fr/fop/QIc4l6FH/PasteurNEUBIAScourse-TrackMateTutorialsMaterias.zip (165 MB)
+https://dl.pasteur.fr/fop/WlrK2yFz/PasteurCourse-TrackMateTutorialsMaterials.zip (165 MB)
 
 ![Screenshot 2025-04-30 at 17 09 13](https://github.com/user-attachments/assets/bd548c8b-cbd2-41d0-be2e-13d607a09eb8)
 

@@ -1,49 +1,48 @@
 This page collects instructions, links and materials for the Day 4
 
-# Pre-workshop tasks:
+# Topic 1: Deep learning using BiaPy
 
-## 1. Install Fiji and plugins
+## Pre-workshop tasks:
+
+### 1. Install Fiji and plugins
 
 - Make sure you have Fiji installed
 - Activate LOCI update site
 
-## 2. Make sure you have a Google account
+### 2. Download the workshop materials to a Google drive folder
+- Download the workshop materials form here -> **[Download workshop materials](https://drive.google.com/drive/folders/1mYLVetBEYlSIDjf7US-KZSPPosc2OrND?usp=sharing)** <br />
+- Upload the materials to your google drive, keep the same folder structure.
 - Workshop materials may occupy several GBs. If you don't have enough space on your google drive consider setting up a new Google account for the workshop.
 
-## 3. Download the workshop materials
-- Download the workshop materials form here -> **[Download workshop materials](https://drive.google.com/drive/folders/1pb7d8rvySsq1kjn0gFqC6k04OZgwB8Qg?usp=sharing)** <br />
-- Upload the materials to your google drive, keep the same folder structure
 
+## Contents:
 
-# Topic 1: Deep learning using BiaPy
-
-Contents:
-
-- What is Deep Learning?
+- What is deep learning?
+- Terminology in neural networks
 - What is BiaPy?
 - How can you use BiaPy?
-- Quality control in deep learning: From dataset validation to model performance monitoring.
 - Tools available in BiaPy for segmentation, denoising, and super-resolution.
-- Example of deep learning in microscopy: Analyzing cancer cell behavior in microfluidics.
-- By the end of the lecture, you’ll have a basic understanding of deep learning and how to train an instance segmentation model using BiaPy.
+- Quality control in deep learning: From dataset validation to model performance monitoring.
+- Hands-on example of deep learning in microscopy: Analyzing cancer cell behavior in microfluidics.
+- By the end of the lecture, you’ll have a basic understanding of deep learning, intuition in available tools and how to train an instance segmentation model using BiaPy.
 
-**Instructor** 
+**Instructor:** 
 
-Joanna Pylvänäinen, Åbo Akademi University. Turku, Finland, joanna.pylvanainen@abo.fi
+Lenka Backová, Image Analysis Hub, Institut Pasteur, Paris, lenka.backova@pasteur.fr.
 
 ## Session 1: Lecture: Deep Learning for Microscopy Image Analysis using BiaPy
 
-In this lecture, we will explore BiaPy, a powerful and accessible toolbox designed to help train deep learning models for microscopy image analysis. We will start with an introduction to deep learning and its applications in microscopy, followed by a detailed discussion of how BiaPy simplifies the process of building and applying neural networks, even for those with limited computational resources.
+In the lecture, we will explore [BiaPy](https://biapyx.github.io/), a powerful and accessible toolbox designed to help train deep learning models for microscopy image analysis. We will start with an introduction to deep learning and its applications in microscopy, followed by a discussion of how BiaPy simplifies the process of building and applying neural networks, even for those with limited computational resources.
 
-> **[Lecture here](https://github.com/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2025/blob/main/ECI/Day_4_materials/BiaPy_lecture_2025.pdf)** <br />
+<!--- > **[Lecture will be available here (TBA)](https://github.com/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2026/tree/main/ECI/Day_4_materials/BiaPy_lecture_2026.pdf)** <br /> -->
 
 ## Session 2: Hands-on: Preparing, Training, and Evaluating a Deep Learning Model for Instance Segmentation in Microscopy
 
-In this comprehensive hands-on session, you will gain practical experience with the full workflow of training a deep learning model for instance segmentation tasks in microscopy, using the BiaPy platform. This session integrates two crucial stages of deep learning workflows: 1) data preparation and training and 2) model evaluation and deployment.
+In this hands-on session, you will gain practical experience with the full workflow of training a deep learning model for instance segmentation tasks in microscopy, using the BiaPy platform. This session integrates three crucial stages of deep learning workflows: 1) data preparation, 2) training the model and 2) model evaluation and deployment.
 
-> **[Workshop walk-through here](https://github.com/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2025/blob/main/ECI/Day_4_materials/BiaPy_workshop_2025.pdf)** <br />
+<!--- (> **[Workshop walk-through here](https://github.com/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2026/tree/main/ECI/Day_4_materials/BiaPy_workshop_2026.pdf)** <br />) -->
 > **[BiaPy platform](https://biapyx.github.io/)** <br />
-> **[Download workshop materials](https://drive.google.com/drive/folders/1pb7d8rvySsq1kjn0gFqC6k04OZgwB8Qg?usp=sharing)** <br />
+> **[Download workshop materials](https://drive.google.com/drive/folders/1mYLVetBEYlSIDjf7US-KZSPPosc2OrND?usp=sharing)** <br />
 
 
 **Part1: Preparing Data and Training an Instance Segmentation Model**
@@ -56,7 +55,7 @@ You will begin by learning how to prepare your data for deep learning, which inc
 
 - Train a deep learning model to segment cells in microscopy images.
 
-By the end of this segment, you will have hands-on experience in developing a deep learning model from scratch and applying it to microscopy data.
+By the end of this segment, you will have hands-on experience in training a deep learning model on microscopy data.
 
 **Part 2: Evaluating Model Quality and Applying It to New Data**
 
@@ -74,8 +73,12 @@ By the end of this segment, you’ll be equipped with the knowledge and tools to
 
 
 > **Link to Quality control notebook**
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2025/blob/main/ECI/Day_4_materials/Quality_control_notebook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2026/tree/main/ECI/Day_4_materials/Quality_control_notebook.ipynb)
 
+
+**Acknowledgement**
+
+Materials were adapted from the last year course of Joanna Pylvänäinen. Data for this section was prepared and provided for the course by Joanna Pylvänäinen.
 
 
 # Topic 2: Tracking with TrackMate I

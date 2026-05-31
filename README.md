@@ -55,7 +55,7 @@ Copy this on your laptop or print it to keep track of what you installaed and do
 - [Day 1](https://github.com/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2026/blob/main/ECI/Day1.md)
   - Fiji
     - [ ] Installed a [fresh version of Fiji](http://fiji.sc/)
-    - [ ] Downloaded the materials for the Fiji tutorial - TBA
+    - [ ] Downloaded the [materials for the Fiji tutorial](https://uncloud.univ-nantes.fr/index.php/s/GNxCM6bHDqtExgf).
 - [Day 2](https://github.com/Image-Analysis-Hub/Pasteur-BioImage-Analysis-Course-2026/blob/main/ECI/Day2.md)
   - Ilastik 
     - [ ] Installed [Ilastik](https://www.ilastik.org/download) 
@@ -83,7 +83,7 @@ Copy this on your laptop or print it to keep track of what you installaed and do
 ## Speakers, Teachers, and Helpers
 
 
-- [Mélodie AMBROSET](https://eng-ur-bia.angers-nantes.hub.inrae.fr/) - UR BIA, INRAE, Nantes, France 
+- [Mélodie AMBROSET](https://www.bibs.inrae.fr/eng/) - BIBS, UR BIA, INRAE, Nantes, France 
 - [Lenka BACKOVÁ](https://scholar.google.com/citations?user=iDPf1qgAAAAJ&hl=en) - Image Analysis Hub, C2RI, Institut Pasteur
 - [Carlos GARCIA-LÒPEZ-DE-HARO](https://github.com/carlosuc3m) - Universidad Carlos III de Madrid
 - [Robert HAASE](https://www.uni-leipzig.de/personenprofil/mitarbeiter/dr-robert-haase) - ScaDS.AI Leipzig

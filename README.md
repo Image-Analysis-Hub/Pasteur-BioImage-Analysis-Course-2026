@@ -88,6 +88,7 @@ Copy this on your laptop or print it to keep track of what you installaed and do
 - [Carlos GARCIA-LÒPEZ-DE-HARO](https://github.com/carlosuc3m) - Universidad Carlos III de Madrid
 - [Robert HAASE](https://www.uni-leipzig.de/personenprofil/mitarbeiter/dr-robert-haase) - ScaDS.AI Leipzig
 - [Gaëlle LETORT](https://research.pasteur.fr/en/member/gaelle-letort/) - Developmental and Stem Cell Biology, Institut Pasteur
+- [Julie MABON](https://research.pasteur.fr/fr/member/julie-mabon/) - Biological Image Analysis research unit, Institut Pasteur
 - [Vannary MEAS-YEDID](https://research.pasteur.fr/en/member/vannary-meas-yedid/) - Biological Image Analysis research unit, Institut Pasteur
 - [Thomas MUSSET](https://research.pasteur.fr/fr/member/thomas-musset/) - Biological Image Analysis research unit, Institut Pasteur
 - [Jean-Christophe OLIVO-MARIN](https://research.pasteur.fr/en/member/jean-christophe-olivo-marin/) - Biological Image Analysis research unit, Institut Pasteur

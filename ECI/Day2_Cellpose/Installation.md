@@ -29,7 +29,7 @@
 > **Option 1** In the terminal:
 > 1. Create the environment: `mamba create -n cellposegui python=3.12 -y`
 > 2. Activate the environment: `mamba activate cellposegui`
-> 3. Install the proper version of Cellpose: `python -m pip install 'cellpose[gui]'==3.1.1.3`
+> 3. Install the proper version of Cellpose: `python -m pip install 'cellpose[gui]'==3.1.1.3`, on windows you might need to use `pip install "cellpose[gui]"==3.1.1.3`
 >
 > **Option 2** Run `mamba create -f cellpose_env.yaml`
 >

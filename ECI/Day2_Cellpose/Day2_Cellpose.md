@@ -146,7 +146,7 @@ Data is located in [ECI/Day2_Cellpose/images/cp3_finetune](./images/cp3_finetune
 - For any biological image instance segmentation task, I suggest proceeding as follows until you get sufficiently good results:
 ```mermaid
 flowchart TD
-    I([biological image instance segmentation task]) --> O[🛠️ Try classic methods eg: thresholding, connected components labeling]
+    I([biological image instance segmentation task]) --> O[🛠️ Try classic methods eg: thresholding, watershed, labeling]
     O -->|good results 👍| S([🥳Success])
     O -->|bad results 🤷| A[🪄 Try pretrained Cellpose 3 on Fiji or other]
     A -->|good results 👍| S

@@ -4,6 +4,8 @@
 > [!NOTE]
 > In this course we use Cellpose 3[^cp3] instead of the latest Cellpose-SAM[^cpsam] as it is faster to run on any laptop and easier to re-train.
 
+If you have any questions on the course you can email me Julie{dot}mabon{at}pasteur{dot}fr
+
 ## 🧑‍💻 Getting ready
 
 > [!WARNING]

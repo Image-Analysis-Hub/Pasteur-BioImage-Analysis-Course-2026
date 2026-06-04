@@ -19,3 +19,10 @@ venv.bak/
 
 # Pycharm
 .idea
+
+# tex
+*.aux
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk

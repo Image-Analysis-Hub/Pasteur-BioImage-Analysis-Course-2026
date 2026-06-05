@@ -48,6 +48,13 @@ Monday June the 1st - Friday June the 5th 2026, Institut Pasteur, Paris, France
 </table>
 
 
+## The big table of segmentation tools
+
+<td align="center">
+<img src="imgs/table.png" alt="Big table of things we saw">
+<br>
+</td>
+
 ## Installation and preparation sheet 
 
 Copy this on your laptop or print it to keep track of what you installaed and downloaded on your computer for the course.

@@ -16,7 +16,7 @@ Tracking cells is well and good but how to deal with the tracking results afterw
 Contents:
 
 - Short lecture to present CellTracksColab
-- Practicals with the CellTracksColab platform
+- Practicals with the CellTracksColab platform: **[slides](https://drive.google.com/file/d/1rCVwWSgAeq_HrrWyBOZSWqbDF78MGIUE/view?usp=drive_link)**
 
 Link to the platform -> **[CellTracksColab](https://github.com/CellMigrationLab/CellTracksColab)**
 
